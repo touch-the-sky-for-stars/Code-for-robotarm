@@ -123,8 +123,10 @@ def teleop_keyboard():
                     mc.set_gripper_state(1, 30)
                 elif key == "1":
                     mc.send_angles(*init_pose)
+                    record_coords = [res, speed, model]
                 elif key in "2":
                     mc.send_angles(*home_pose)
+                    record_coords = [res, speed, model]
                 elif key in "3":
                     rep = mc.get_angles()
                     home_pose[0] =rep
